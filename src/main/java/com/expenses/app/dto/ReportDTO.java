@@ -2,6 +2,7 @@ package com.expenses.app.dto;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.Map;
 public class ReportDTO {
     
     @Data
+    @NoArgsConstructor
     @AllArgsConstructor
     public static class SummaryResponse {
         private Double totalIngresos;
@@ -18,6 +20,7 @@ public class ReportDTO {
     }
     
     @Data
+    @NoArgsConstructor
     @AllArgsConstructor
     public static class CategorySummary {
         private String categoria;
@@ -27,6 +30,7 @@ public class ReportDTO {
     }
     
     @Data
+    @NoArgsConstructor
     @AllArgsConstructor
     public static class ByCategoryResponse {
         private List<CategorySummary> resumenPorCategoria;

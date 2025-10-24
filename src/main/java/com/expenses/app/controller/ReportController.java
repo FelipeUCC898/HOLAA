@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @Tag(name = "Reportes", description = "Reportes financieros y resúmenes")
 public class ReportController {
-
+    
     private final ReportService reportService;
-
+    
     @GetMapping("/user/{userId}/summary")
     @Operation(summary = "Obtener resumen financiero del usuario")
     public ResponseEntity<ReportDTO.SummaryResponse> getSummary(@PathVariable Integer userId) {
         ReportDTO.SummaryResponse summary = reportService.getSummary(userId);
         return ResponseEntity.ok(summary);
     }
-
+    
     @GetMapping("/user/{userId}/by-category")
     @Operation(summary = "Obtener reporte de transacciones por categoría")
     public ResponseEntity<ReportDTO.ByCategoryResponse> getByCategory(@PathVariable Integer userId) {
@@ -30,3 +30,4 @@ public class ReportController {
         return ResponseEntity.ok(report);
     }
 }
+

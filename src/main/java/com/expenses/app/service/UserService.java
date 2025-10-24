@@ -17,7 +17,7 @@ import java.util.Optional;
 public class UserService implements UserDetailsService {
     
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder; // ✅ Inyectado desde PasswordConfig
     
     @Override
     public UserDetails loadUserByUsername(String correo) throws UsernameNotFoundException {
